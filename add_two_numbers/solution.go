@@ -5,38 +5,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func NewList(nums []int) *ListNode {
-	if len(nums) == 0 {
-		return nil
-	}
-
-	firstNode := &ListNode{Val: nums[0]}
-	temp := firstNode
-	for i := 1; i < len(nums); i++ {
-		temp.Next = &ListNode{Val: nums[i]}
-		temp = temp.Next
-	}
-	return firstNode
-}
-
-func (node *ListNode) Equals(m *ListNode) bool {
-	n := node
-	for n != nil || m != nil {
-		if (n == nil && m != nil) || (n != nil && m == nil) {
-			return false
-		}
-
-		if n.Val != m.Val {
-			return false
-		}
-
-		n = n.Next
-		m = m.Next
-	}
-
-	return true
-}
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	newNode := &ListNode{}
 	a, b, ab := l1, l2, newNode

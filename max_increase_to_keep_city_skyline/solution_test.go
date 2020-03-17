@@ -1,6 +1,9 @@
 package max_increase_to_keep_city_skyline
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func Test_MaxIncreaseKeepingSkyline(t *testing.T) {
 	grid := [][]int{
@@ -11,9 +14,5 @@ func Test_MaxIncreaseKeepingSkyline(t *testing.T) {
 	}
 
 	increment := maxIncreaseKeepingSkyline(grid)
-	if increment == 35 {
-		t.Log("Pass")
-	} else {
-		t.Error("Fail")
-	}
+	assert.Equal(t, increment, 35)
 }
