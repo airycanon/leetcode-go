@@ -21,12 +21,12 @@ func maxIncreaseKeepingSkyline(grid [][]int) int {
 	increment := 0
 	for i := 0; i < row; i++ {
 		for j := 0; j < column; j++ {
-			//根据某个位置的行和列，取到最小的，否则天际线会超出
-			min := maxItemsInRow[i]
-			if maxItemsInColumn[j] < min {
-				min = maxItemsInColumn[j]
+			//根据某个位置的行最大值和列最大值，取其中较小的
+			max := maxItemsInRow[i]
+			if maxItemsInColumn[j] < max {
+				max = maxItemsInColumn[j]
 			}
-			increment += min - grid[i][j]
+			increment += max - grid[i][j]
 		}
 	}
 

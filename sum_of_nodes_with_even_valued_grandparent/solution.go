@@ -1,4 +1,4 @@
-package sum_of_nodes_with_even_alued_randparent
+package sum_of_nodes_with_even_valued_grandparent
 
 type TreeNode struct {
 	Val   int
