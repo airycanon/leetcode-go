@@ -13,6 +13,6 @@ func Test_NumberOfSteps(t *testing.T) {
 	}
 
 	for key, value := range testCase {
-		assert.Equal(t, numberOfSteps(key), value)
+		assert.Equal(t, value, numberOfSteps(key))
 	}
 }

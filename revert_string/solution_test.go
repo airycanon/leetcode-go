@@ -13,6 +13,6 @@ func Test_RevertString(t *testing.T) {
 
 	for key, value := range testCase {
 		result := reverseString([]byte(key))
-		assert.Equal(t, string(result), value)
+		assert.Equal(t, value, string(result))
 	}
 }

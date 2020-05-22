@@ -16,5 +16,5 @@ func Test_DecompressRLElist(t *testing.T) {
 	}
 
 	input, output = []int{1, 2, 3, 4, 4, 5, 6, 7}, []int{2, 4, 4, 4, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7}
-	assert.Equal(t, decompressRLElist(input), output)
+	assert.Equal(t, output, decompressRLElist(input))
 }

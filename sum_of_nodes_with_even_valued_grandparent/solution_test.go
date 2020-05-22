@@ -54,5 +54,5 @@ func Test_SumEvenGrandparent(t *testing.T) {
 		},
 	}
 
-	assert.Equal(t, sumEvenGrandparent(&root), 18)
+	assert.Equal(t, 18, sumEvenGrandparent(&root))
 }

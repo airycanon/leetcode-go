@@ -7,17 +7,17 @@ import (
 
 func Test_LengthOfLongestSubstring(t *testing.T) {
 	case1 := "dfwefewfewf"
-	assert.Equal(t, lengthOfLongestSubstring(case1), 4)
+	assert.Equal(t, 4, lengthOfLongestSubstring(case1))
 
 	case2 := "aaaaaa"
-	assert.Equal(t, lengthOfLongestSubstring(case2), 1)
+	assert.Equal(t, 1, lengthOfLongestSubstring(case2))
 
 	case3 := "qwertyuiop"
-	assert.Equal(t, lengthOfLongestSubstring(case3), 10)
+	assert.Equal(t, 10, lengthOfLongestSubstring(case3))
 
 	case4 := "qwertyuiopqwertyuiop"
-	assert.Equal(t, lengthOfLongestSubstring(case4), 10)
+	assert.Equal(t, 10, lengthOfLongestSubstring(case4))
 
-	case5 := "qwertyuiopnqwertyuiop"
-	assert.Equal(t, lengthOfLongestSubstring(case5), 11)
+	case6 := "pwwkew"
+	assert.Equal(t, 3, lengthOfLongestSubstring(case6))
 }

@@ -14,5 +14,5 @@ func Test_MaxIncreaseKeepingSkyline(t *testing.T) {
 	}
 
 	increment := maxIncreaseKeepingSkyline(grid)
-	assert.Equal(t, increment, 35)
+	assert.Equal(t, 35, increment)
 }

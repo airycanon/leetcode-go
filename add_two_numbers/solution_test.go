@@ -18,7 +18,7 @@ func Test_AddTwoNumbers(t *testing.T) {
 	a = NewList([]int{2, 4, 3})
 	b = NewList([]int{5, 6, 4})
 	ab = NewList([]int{7, 0, 8})
-	assert.Equal(t, addTwoNumbers(a, b), ab)
+	assert.Equal(t, ab, addTwoNumbers(a, b))
 }
 
 func NewList(nums []int) *ListNode {

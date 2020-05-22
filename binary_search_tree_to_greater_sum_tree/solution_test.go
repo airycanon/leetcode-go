@@ -82,5 +82,5 @@ func Test_BstToGst(t *testing.T) {
 		},
 	}
 
-	assert.Equal(t, bstToGst(input), output)
+	assert.Equal(t, output, bstToGst(input))
 }
