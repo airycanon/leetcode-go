@@ -1,13 +1,7 @@
 package longest_substring_without_repeating_characters
 
-import (
-	"fmt"
-	"strings"
-)
-
 func lengthOfLongestSubstring(s string) int {
-	fmt.Println(s)
-	found := make([]rune, 0)
+	found := make(map[rune]int)
 	chars := []rune(s)
 	var (
 		max   = 0
@@ -19,17 +13,17 @@ func lengthOfLongestSubstring(s string) int {
 
 	for left < length {
 		for right < length {
-			if strings.Index(string(found), string(chars[right])) > -1 {
+			if _, exist := found[chars[right]]; exist {
+				delete(found, chars[left])
 				left++
-				found = found[1:]
 				break
 			} else {
-				found = append(found, chars[right])
+				found[chars[right]] = 1
 				right++
 			}
 
-			if len(found) > max {
-				max = len(found)
+			if right-left > max {
+				max = right - left
 			}
 		}
 
