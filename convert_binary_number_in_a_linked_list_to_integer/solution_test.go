@@ -21,17 +21,18 @@ func Test_GetDecimalValue(t *testing.T) {
 }
 
 func convert(n []int) *ListNode {
-	head := &ListNode{
-		Val: n[0],
-	}
-	n = n[1:]
+	var current, head *ListNode
 
-	tmp := head
 	for len(n) > 0 {
-		tmp.Next, n = &ListNode{
-			Val: n[0],
-		}, n[1:]
-		tmp = tmp.Next
+		node := &ListNode{Val: n[0]}
+		n = n[1:]
+		if current == nil {
+			current = node
+			head = node
+		} else {
+			current.Next = node
+			current = node
+		}
 	}
 
 	return head
